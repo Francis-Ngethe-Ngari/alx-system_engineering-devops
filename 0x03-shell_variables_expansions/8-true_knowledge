@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv $TRUEKNOWLEDGE + printenv $TRUEKNOWLEDGE
+expr $TRUEKNOWLEDGE + 128
