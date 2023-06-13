@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv POWER / printenv DIVIDE
+printenv POWER / DIVIDE
