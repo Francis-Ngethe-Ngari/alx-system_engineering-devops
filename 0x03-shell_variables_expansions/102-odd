@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n '^' . | grep -v '2$' | cut -d':' -f2-
+ls -1 | grep -n '^'| grep -v '2$' | cut -d':' -f2-
