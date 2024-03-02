@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
-# Bash Script that Pings an Ip Address passed as an argument.
-ping $1 -c 5
+# The if statement first checks if an argument is passed to script
+# If not it prints the a message.
+# Else if an argument is passed the ping command tries to establish
+# connection with given IP address. 
+if [[ $# -eq 0 ]]
+then
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+	ping $1 -c 5
+fi
+
+
