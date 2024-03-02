@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Netcat cmd is used to start listening on a specific port: 98
+# for a connection.
+nc -l -p 98
