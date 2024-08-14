@@ -14,15 +14,16 @@ def number_of_subscribers(subreddit):
     (not active users, total subscribers) for a given subreddit
     """
 
+    if subreddit is None or not isinstance(subreddit, st):
+        return 0
+
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
 
-    headers = {'User-Agent': 'request'}
+    headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
 
     response = requests.get(url, headers=headers, allow_redirects=False)
 
-    if response.status_code == 200:
-
-        data = response.json()
+    data = response.json()
 
     try:
         return data['data']['subscribers']
