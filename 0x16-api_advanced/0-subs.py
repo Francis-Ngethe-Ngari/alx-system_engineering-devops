@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 
 """
-    Defined number_of_subscribers(subreddit) function to querry
-    Reddit API to get number of subscribers of a subreddit.
+Connect to Reddit Api to print no of subscribers of a given subreddit.
 """
 
 import requests
 
 def number_of_subscribers(subreddit):
 
-    #Defining the API Endpoint
+    """
+    Retrieve the number of subscribers of a subreddit.
+    """
+
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
 
     headers = {'user-agent': 'request'}
