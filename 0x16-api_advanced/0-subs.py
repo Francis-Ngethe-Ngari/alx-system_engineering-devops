@@ -14,10 +14,10 @@ def number_of_subscribers(subreddit):
     (not active users, total subscribers) for a given subreddit
     """
 
-    if subreddit is None or not isinstance(subreddit, st):
+    if subreddit is None or not isinstance(subreddit, str):
         return 0
 
-    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'.format(subreddit)
 
     headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
 
