@@ -2,4 +2,4 @@
 # Configure nginx to listen on port 80
 cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
 service nginx restart # Restart nginx service
-kill "$(pgrep 'ngix' | head -1)" # Terminate the 1st nginx process
+service nginx stop # stop nginx service
