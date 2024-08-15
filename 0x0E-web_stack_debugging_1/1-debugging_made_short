@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Configure nginx to listen on port 80
-ln -sf /etc/nginx/sites-avaliable/default /etc/nginx/sites-enabled/default # Create a symbolic link
-service nginx start # Restart nginx service
+sed --follow-symlinks -i 's/8080/80' /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default 
+service nginx restart # Restart nginx service
 kill "$(pgrep 'ngix' | head -1)" # Terminate the 1st nginx process
