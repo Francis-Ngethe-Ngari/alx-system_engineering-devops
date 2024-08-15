@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Debuging ubuntu container's nginx  installation.
+# nginx should be running and listening on port 80 of all server's active IPV4IPs.
+
+# Install netstat Package
+# Monitors network connections
+apt-get update
+apt-get install net-tools -y
+
+# Check if port 80 is running any service
+# If result is empty, means port 80 is not listening to any service
+netstat -tulpn |grep 80
+
+# Checking if nginx is installed in ubuntu container
+nginx -v
+
+# If not installed, install it using apt package manager
+apt-get install nginx -y
+
+# Restart nginx service
+service nginx restart
