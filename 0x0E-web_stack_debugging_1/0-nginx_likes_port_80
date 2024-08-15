@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Debuging ubuntu container's nginx  installation.
 # nginx should be running and listening on port 80 of all server's active IPV4IPs.
 
