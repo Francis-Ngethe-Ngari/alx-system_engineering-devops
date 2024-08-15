@@ -2,22 +2,17 @@
 # Debuging ubuntu container's nginx  installation.
 # nginx should be running and listening on port 80 of all server's active IPV4IPs.
 
-# Install netstat Package
-# Monitors network connections
-apt-get update
-apt-get install net-tools -y
+# Navigating to sites-enabled dir for nginx
+cd /etc/nginx/sites-enabled/ || exit
 
-# Check if port 80 is running any service
-# If result is empty, means port 80 is not listening to any service
-netstat -tulpn |grep 80
+# Deleting the default file which contains acive
+# or enabled configurations.
+rm default
 
-# Checking if nginx is installed in ubuntu container
-nginx -v
+# Creating a symbolic link to capture any changes made
+# default file in sites-available dir, which will reflect
+# on default file in sites-enabled dir
+ln -s /etc/nginx/sites-available/default default
 
-# If not installed, install it using apt package manager
-apt-get install nginx -y
-
-# Restart nginx service
+# restart service
 service nginx restart
-
-curl 0:80
