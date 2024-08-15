@@ -19,3 +19,5 @@ apt-get install nginx -y
 
 # Restart nginx service
 service nginx restart
+
+curl 0:80
