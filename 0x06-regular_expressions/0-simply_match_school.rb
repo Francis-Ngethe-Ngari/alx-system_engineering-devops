@@ -12,9 +12,5 @@ text = ARGV[0]
 # Regular Expression pattern
 pattern = /School/
 
-# Check if a match
-if text.match?(pattern)
-  puts 'Match found'
-else
-  puts 'Match not found!'
-end
+matches = text.scan(pattern)
+puts matches.join
