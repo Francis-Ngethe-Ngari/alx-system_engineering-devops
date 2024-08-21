@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # Installs nginx on web01 server and by default it listens on port 80.
 # updates contents to be displayed once request is made to the web server,
-# information displayed should be "Hello Word"
+# information displayed should be "Hello World"
 
-apt-get -y update
-apt-get -y install nginx
-sudo ufw allow 'nginx HTTP'
-echo "Hello World" > /var/www/html/index-demo.html
-service nginx restart
+sudo apt update
+sudo apt install nginx
+echo "Hello World" > /var/www/html/index.html
+sudo service nginx restart
