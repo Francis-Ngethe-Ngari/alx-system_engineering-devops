@@ -3,8 +3,8 @@
 # updates contents to be displayed once request is made to the web server,
 # information displayed should be "Hello Word"
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
+apt-get -y update
+apt-get -y install nginx
 sudo ufw allow 'nginx HTTP'
 echo "Hello World" > /var/www/html/index-demo.html
-sudo service nginx restart
+service nginx restart
