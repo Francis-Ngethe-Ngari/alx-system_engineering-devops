@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Script transfer's a file from client to server.
+# First a check is initiated to check if 4 params are passed.
+# Displays error if less than 3 params are passed.
+# scp: secure copy command-line utility is used to transfer files between
+# hosts in a network.
+
+if [ $# -lt 4 ]
+then
+	echo "Usage: $0 FILE_TO_PATH IP USERNAME PATH_TO_SSH_KEY"
+else
+	scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~
+fi
