@@ -4,6 +4,6 @@
 # information displayed should be "Hello Word"
 
 sudo apt-get -y 
-sudo apt-get install -y nginx
+sudo apt-get install nginx -y
 echo "Hello World" > /var/www/html/index-demo.html
 sudo service nginx restart
