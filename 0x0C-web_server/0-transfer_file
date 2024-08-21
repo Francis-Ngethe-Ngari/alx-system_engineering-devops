@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script transfer's a file from client to server.
 # First a check is initiated to check if 4 params are passed.
 # Displays error if less than 3 params are passed.
