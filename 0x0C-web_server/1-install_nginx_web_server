@@ -3,9 +3,7 @@
 # updates contents to be displayed once request is made to the web server,
 # information displayed should be "Hello World"
 
-sudo su
-apt-get -y  update
-apt-get -y install nginx-core
-cp /etc/nginx/modules-available/default /etc/nginx/modules-enabled/default
-echo "Hello World" > /var/www/html/index.html
+sudo apt-get -y  update
+sudo apt-get -y install nginx
+echo "Hello World" > /var/www/html/index.nginx-debian.html
 service nginx restart
