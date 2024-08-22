@@ -3,11 +3,8 @@
 # updates contents to be displayed once request is made to the web server,
 # information displayed should be "Hello World"
 
-sudo bash <<EOF
-apt-get -y update
-apt-get -y install nginx
+sudo apt-get -y update
+sudo apt-get install nginx
 echo "Hello World" > /var/www/html/index.nginx-debian.html
-service nginx restart
-curl localhost
-EOF
-
+sudo service nginx restart
+cd /
