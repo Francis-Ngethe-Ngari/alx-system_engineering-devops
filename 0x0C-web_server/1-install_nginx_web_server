@@ -3,10 +3,10 @@
 # Ensures its listening to port 80. 
 # Updates contents to be displayed once request is made to the web server,
 # information displayed should be "Hello World"
-
 sudo apt-get -y update
 sudo apt-get install nginx
 sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
 # Create "Hello World" Page
 echo "Hello World" | sudo tee /var/www/html/index.html
 sudo service nginx start
+curl http://localhost/
