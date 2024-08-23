@@ -10,8 +10,13 @@ command => 'chmod 0744 /tmp/school',
 path    => '/bin/'
 }
 
--> exec { 'change file owner and group':
-command => 'chwon www-data:www-data /tmp/school',
+-> exec { 'change file owner':
+command => 'chwon www-data /tmp/school',
+path    => '/bin/'
+}
+
+-> exec { 'change file group':
+command => 'chwon :www-data /tmp/school',
 path    => '/bin/'
 }
 
