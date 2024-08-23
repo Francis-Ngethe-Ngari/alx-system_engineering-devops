@@ -21,6 +21,6 @@ path    => '/bin/'
 }
 
 -> exec { 'Add text':
-command => 'echo "I love Puppet" /tmp/school',
+command => 'echo "I love Puppet" > /tmp/school',
 path    => '/bin/'
 }
