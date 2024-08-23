@@ -11,7 +11,7 @@ path    => '/bin/'
 }
 
 -> exec { 'change file owner and group':
-command => 'chwon -R www-data:www-data /tmp/school',
+command => 'chwon www-data:www-data /tmp/school',
 path    => '/bin/'
 }
 
