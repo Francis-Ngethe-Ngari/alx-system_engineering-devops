@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-# Create an ssh key pair.
+# Create an ssh key pair and save it in file school.
 
-# Define the filename for Private Key
-Primary_Key="school"
-
-# Define the PassPhrase
-PassPhrase="betty"
-
-# Generate Key
-ssh-keygen -t rsa -b 4096 -f "$Private_Key" -N "$PassPhrase"
+ssh-keygen -t rsa -b 4096 -f school -N betty
