@@ -1,6 +1,6 @@
 # Terminate a process: killmenow
 
 exec { 'kill a process':
-command  => 'pkill killmenow',
-provider => '/shell/'
+command => 'pkill killmenow',
+path    => '/bin/',
 }
