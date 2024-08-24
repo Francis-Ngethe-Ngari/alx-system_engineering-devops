@@ -2,7 +2,7 @@
 # Create an ssh key pair.
 
 # Define the filename for Private Key
-Primary_Key= "~/.ssh/school"
+Primary_Key="school"
 
 # Define the PassPhrase
 PassPhrase="betty"
