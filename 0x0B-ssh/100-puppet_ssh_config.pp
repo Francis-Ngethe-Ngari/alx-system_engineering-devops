@@ -1,15 +1,20 @@
 # Configure SSH client to use Private Key and refuse password
 # authentication.
 
-package { 'openssh-clinet':
-ensure => installed,
+file {'/etc/ssh/ssh_config':
+ensure => 'present',
 }
 
-file { 'etc/ssh/sshd_config':
-ensure  => file,
-mode    => '0644',
-owner   => 'root',
-group   => 'root',
-content => '/etc/ssh/sshd_config.erb',
-require => package['openssh-client'],
+file_line { 'Disable password auth':
+path    => '/etc/ssh/ssh_config',
+line    => 'PasswordAuthentication no',
+match   => 'PasswordAuthentication yes'
+replace => true
+}
+
+file_line { 'Use private key':
+path    => '/etc/ssh/ssh_config',
+line    => 'IdentityFile ~/.ssh/school',
+match   => '^IdentityFile'
+replace => true
 }
