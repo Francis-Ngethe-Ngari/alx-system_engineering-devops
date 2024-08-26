@@ -1,0 +1,6 @@
+# Configuring SSH congfig file to disable password authentication and
+# use a specific private key on local client.
+
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
