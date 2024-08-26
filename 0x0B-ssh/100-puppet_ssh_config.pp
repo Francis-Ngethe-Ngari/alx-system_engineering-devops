@@ -13,8 +13,8 @@ replace => true
 }
 
 file_line { 'Use private key':
-path    => '/etc/ssh/ssh_config',
-line    => 'IdentityFile ~/.ssh/school',
-match   => '^IdentityFile'
-replace => true
+ensure => 'present',
+line   => 'IdentityFile ~/.ssh/school',
+match  => '^IdentityFile',
+path   => '/etc/ssh/ssh_config',
 }
