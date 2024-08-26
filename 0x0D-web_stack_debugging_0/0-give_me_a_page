@@ -1,1 +1,5 @@
+#!/usr/bin/env bash
+# Fix apache2 inorder to display a page when a request is made
+# on local host.
+
 sudo service apache2 start
