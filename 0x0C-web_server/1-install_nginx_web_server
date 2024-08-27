@@ -4,9 +4,8 @@
 # Updates contents to be displayed once request is made to the web server,
 # information displayed should be "Hello World"
 sudo apt-get -y update
-sudo apt-get install nginx
+sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
-echo "Hello World" | sudo tee /var/www/html/index.html
+sudo sed -i '/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+echo "Hello World!" | sudo tee /var/www/html/index.html
 sudo service nginx start
-su -c 'curl localhost'
