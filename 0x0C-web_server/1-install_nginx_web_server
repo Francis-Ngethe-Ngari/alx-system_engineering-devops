@@ -2,7 +2,7 @@
 # Installs Nginx on web01 server.
 # Ensures its listening to port 80. 
 # Updates contents to be displayed once request is made to the web server,
-# information displayed should be "Hello World"
+# information displayed should be "Hello World!"
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
