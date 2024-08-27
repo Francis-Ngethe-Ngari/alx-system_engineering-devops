@@ -4,9 +4,5 @@
 # Install necessary packages e.g. nginx
 # Allow HTTP requests by updating firewall rule.
 
-sudo apt-get -y update
-sudo apt-get -y nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Hello World" | sudo tee /var/www/html/index.html
 sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
