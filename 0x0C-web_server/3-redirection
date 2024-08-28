@@ -2,7 +2,9 @@
 # Configure your Nginx server so that /redirect_me is redirecting to
 # another page.
 # Install necessary packages e.g. nginx
-# Allow HTTP requests by updating firewall rule.
 
-sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://https://www.youtube.com/watch?v=_ir9du6fq4Q/ permanent;' \
+/etc/nginx/sites-available/default
 sudo service nginx restart
